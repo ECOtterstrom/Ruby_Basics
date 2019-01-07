@@ -1,0 +1,134 @@
+Reading Documentation 1 Exercises
+
+1. Where can you find the most complete documentation?
+
+    ruby-doc.org
+
+    
+2. Locate the description of the while loop in the ruby documentation.
+
+    https://ruby-doc.com/core/doc/syntax/control_expressions_rdoc.html
+    
+    while Loop¶ ↑
+    The while loop executes while a condition is true:
+
+    a = 0
+
+    while a < 10 do
+        p a
+        a += 1
+    end
+
+    p a
+    Prints the numbers 0 through 10. The condition a < 10 is checked before the loop is entered, 
+    then the body executes, then the condition is checked again. When the condition results in 
+    false the loop is terminated.
+
+    The do keyword is optional. The following loop is equivalent to the loop above:
+
+    while a < 10
+        p a
+        a += 1
+    end
+    
+    The result of a while loop is nil unless break is used to supply a value.
+    
+    
+3. Using the ruby documentation, determine what value a while loop returns.
+
+    nil unless break is used, in which case the value passed to break is used.
+    
+    
+4. In the previous exercise, you learned that the while loop returns nil unless break is used. 
+   Locate the documentation for break, and determine what value break sets the return value 
+   for the while loop.
+   
+   https://ruby-doc.com/core/doc/syntax/control_expressions_rdoc.html
+   
+   When a break is used with a while loop, the code returns the same value it would print.
+   
+   nil if no arguments are passed to break, or the value of the argument if an argument is given.
+   
+   
+5. Using the ruby documentation, determine how you can write large numbers in a way that makes them 
+   easier to read.
+   
+   https://ruby-doc.org/core-2.6/doc/syntax/literals_rdoc.html
+   
+   This is found under the topic Literals and says underscores can be used in numbers to make them
+   more readable, but will not affect their value.
+   
+   
+6. Using the ruby documentation, determine how you would write a Symbol that represents your name. 
+   We aren't looking for a String; we want a Symbol, which is one of ruby's datatypes.
+   
+   https://ruby-doc.com/core/Symbol.html
+   
+   Thus if Fred is a constant in one context, a method in another, and a class in a third, the 
+   Symbol :Fred will be the same object in all three contexts.
+   
+   
+7. Consider the following method and a call to that method:
+
+    def my_method(a, b = 2, c = 3, d)
+        p [a, b, c, d]
+    end
+
+    my_method(4, 5, 6)
+
+    Use the ruby documentation to determine what this code will print.
+    
+    This subject is found in the Default Positional Arguments section of the 
+    Calling Methods page.  
+    https://ruby-doc.com/core/doc/syntax/calling_methods_rdoc.html
+    
+    You will see ruby print [4, 5, 3, 6].
+
+    First 4 is assigned to a, then 6 is assigned to d. This leaves only the arguments 
+    with default values. Since 5 has not been assigned to a value yet, it is given to 
+    b and c uses its default value of 3.
+   
+   
+8. Locate and open the class documentation for the String class.
+
+   https://ruby-doc.com/core/String.html
+    
+    
+9. Use the ruby documentation for the String class to determine which method can be 
+   used to right justify a String object.
+   
+   rjust(integer, padstr=' ') → new_str click to toggle source
+   If integer is greater than the length of str, returns a new String of length integer
+   with str right justified and padded with padstr; otherwise, returns str.
+   
+   
+10.Locate the ruby documentation for methods File::path and File#path. 
+   How are they different?
+   
+   File::path is a class method, while File#path is an instance method.
+
+  Class methods are called on the class, while instance methods are called on objects. 
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
